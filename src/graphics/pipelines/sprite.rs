@@ -9,7 +9,7 @@ use wgpu::{
     BufferSize, BufferUsage, ColorStateDescriptor, ColorWrite, CullMode, FilterMode, FrontFace,
     IndexFormat, InputStepMode, PipelineLayoutDescriptor, PolygonMode, PrimitiveTopology,
     ProgrammableStageDescriptor, RasterizationStateDescriptor, RenderPass, RenderPipeline,
-    RenderPipelineDescriptor, Sampler, SamplerDescriptor, ShaderModuleSource, TextureFormat,
+    RenderPipelineDescriptor, Sampler, SamplerDescriptor, ShaderModuleDescriptor, TextureFormat,
     TextureViewDescriptor, VertexAttributeDescriptor, VertexBufferDescriptor, VertexFormat,
     VertexStateDescriptor,
 };
@@ -216,14 +216,22 @@ impl Pipeline for SpritePipeline {
 
         let vs_module = renderer
             .device
-            .create_shader_module(ShaderModuleSource::SpirV(
-                get_shader("sprite/simple.vert").unwrap().into(),
-            ));
+            .create_shader_module(&ShaderModuleDescriptor {
+                source:                   wgpu::ShaderSource::SpirV(
+                    get_shader("sprite/simple.vert").unwrap().into(),
+                ),
+                label:                    None,
+                experimental_translation: false,
+            });
         let fs_module = renderer
             .device
-            .create_shader_module(ShaderModuleSource::SpirV(
-                get_shader("sprite/simple.frag").unwrap().into(),
-            ));
+            .create_shader_module(&ShaderModuleDescriptor {
+                source:                   wgpu::ShaderSource::SpirV(
+                    get_shader("sprite/simple.frag").unwrap().into(),
+                ),
+                label:                    None,
+                experimental_translation: false,
+            });
 
         let pipeline = renderer
             .device
@@ -266,7 +274,7 @@ impl Pipeline for SpritePipeline {
                 alpha_to_coverage_enabled: false,
                 sample_mask:               0,
                 vertex_state:              VertexStateDescriptor {
-                    index_format:   IndexFormat::Uint16,
+                    index_format:   None,
                     vertex_buffers: &[VertexBufferDescriptor {
                         stride:     Self::STRIDE,
                         step_mode:  InputStepMode::Instance,

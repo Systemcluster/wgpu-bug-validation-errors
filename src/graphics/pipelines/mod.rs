@@ -6,10 +6,6 @@ pub trait Pipeline: Send + Sync {
         Self: Sized;
 }
 impl dyn Pipeline {
-    pub fn downcast_ref<P: Pipeline>(&self) -> &P {
-        unsafe { &*(self as *const dyn Pipeline as *const P) }
-    }
-
     pub fn downcast_mut<P: Pipeline>(&mut self) -> &mut P {
         unsafe { &mut *(self as *mut dyn Pipeline as *mut P) }
     }
