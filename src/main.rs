@@ -49,10 +49,9 @@ fn main() {
     };
     let device_features = Features::default() | Features::PUSH_CONSTANTS;
     let device_descriptor = DeviceDescriptor {
-        limits:            device_limits,
-        features:          device_features,
-        shader_validation: true,
-        label:             None,
+        limits:   device_limits,
+        features: device_features,
+        label:    None,
     };
     let (device, queue) = block_on(
         adapter.request_device(&device_descriptor, Some(&std::path::Path::new("./trace"))),

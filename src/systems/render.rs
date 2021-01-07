@@ -38,6 +38,7 @@ pub fn render(
                 },
             }],
             depth_stencil_attachment: None,
+            label:                    None,
         });
         pipeline.draw(&renderer, &mut pass);
     }

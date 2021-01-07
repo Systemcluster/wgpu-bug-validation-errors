@@ -217,20 +217,16 @@ impl Pipeline for SpritePipeline {
         let vs_module = renderer
             .device
             .create_shader_module(&ShaderModuleDescriptor {
-                source:                   wgpu::ShaderSource::SpirV(
-                    get_shader("sprite/simple.vert").unwrap().into(),
-                ),
-                label:                    None,
-                experimental_translation: false,
+                source: wgpu::ShaderSource::SpirV(get_shader("sprite/simple.vert").unwrap().into()),
+                label:  None,
+                flags:  wgpu::ShaderFlags::empty(),
             });
         let fs_module = renderer
             .device
             .create_shader_module(&ShaderModuleDescriptor {
-                source:                   wgpu::ShaderSource::SpirV(
-                    get_shader("sprite/simple.frag").unwrap().into(),
-                ),
-                label:                    None,
-                experimental_translation: false,
+                source: wgpu::ShaderSource::SpirV(get_shader("sprite/simple.frag").unwrap().into()),
+                label:  None,
+                flags:  wgpu::ShaderFlags::empty(),
             });
 
         let pipeline = renderer
