@@ -17,7 +17,6 @@ Init(
             max_uniform_buffer_binding_size: 16384,
             max_push_constant_size: 128,
         ),
-        shader_validation: true,
     ),
     backend: Vulkan,
 ),
@@ -189,7 +188,9 @@ CreateShaderModule(
     id: Id(0, 1, Vulkan),
     desc: (
         label: None,
-        experimental_translation: false,
+        flags: (
+            bits: 0,
+        ),
     ),
     data: "data3.spv",
 ),
@@ -197,7 +198,9 @@ CreateShaderModule(
     id: Id(1, 1, Vulkan),
     desc: (
         label: None,
-        experimental_translation: false,
+        flags: (
+            bits: 0,
+        ),
     ),
     data: "data4.spv",
 ),
@@ -384,6 +387,7 @@ WriteBuffer(
 Submit(1, [
     RunRenderPass(
         base: (
+            label: None,
             commands: [
                 SetPipeline(Id(0, 1, Vulkan)),
                 SetVertexBuffer(
@@ -399,7 +403,7 @@ Submit(1, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 19983,
+                    instance_count: 20101,
                     first_vertex: 0,
                     first_instance: 0,
                 ),
@@ -410,9 +414,9 @@ Submit(1, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 20015,
+                    instance_count: 19897,
                     first_vertex: 0,
-                    first_instance: 19984,
+                    first_instance: 20102,
                 ),
             ],
             dynamic_offsets: [],
@@ -466,6 +470,7 @@ WriteBuffer(
 Submit(2, [
     RunRenderPass(
         base: (
+            label: None,
             commands: [
                 SetPipeline(Id(0, 1, Vulkan)),
                 SetVertexBuffer(
@@ -481,7 +486,7 @@ Submit(2, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 19983,
+                    instance_count: 20101,
                     first_vertex: 0,
                     first_instance: 0,
                 ),
@@ -492,9 +497,9 @@ Submit(2, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 20015,
+                    instance_count: 19897,
                     first_vertex: 0,
-                    first_instance: 19984,
+                    first_instance: 20102,
                 ),
             ],
             dynamic_offsets: [],
@@ -547,6 +552,7 @@ WriteBuffer(
 Submit(3, [
     RunRenderPass(
         base: (
+            label: None,
             commands: [
                 SetPipeline(Id(0, 1, Vulkan)),
                 SetVertexBuffer(
@@ -562,7 +568,7 @@ Submit(3, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 19983,
+                    instance_count: 20101,
                     first_vertex: 0,
                     first_instance: 0,
                 ),
@@ -573,9 +579,9 @@ Submit(3, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 20015,
+                    instance_count: 19897,
                     first_vertex: 0,
-                    first_instance: 19984,
+                    first_instance: 20102,
                 ),
             ],
             dynamic_offsets: [],
@@ -628,6 +634,7 @@ WriteBuffer(
 Submit(4, [
     RunRenderPass(
         base: (
+            label: None,
             commands: [
                 SetPipeline(Id(0, 1, Vulkan)),
                 SetVertexBuffer(
@@ -643,7 +650,7 @@ Submit(4, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 19983,
+                    instance_count: 20101,
                     first_vertex: 0,
                     first_instance: 0,
                 ),
@@ -654,9 +661,9 @@ Submit(4, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 20015,
+                    instance_count: 19897,
                     first_vertex: 0,
-                    first_instance: 19984,
+                    first_instance: 20102,
                 ),
             ],
             dynamic_offsets: [],
@@ -709,6 +716,7 @@ WriteBuffer(
 Submit(5, [
     RunRenderPass(
         base: (
+            label: None,
             commands: [
                 SetPipeline(Id(0, 1, Vulkan)),
                 SetVertexBuffer(
@@ -724,7 +732,7 @@ Submit(5, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 19983,
+                    instance_count: 20101,
                     first_vertex: 0,
                     first_instance: 0,
                 ),
@@ -735,9 +743,9 @@ Submit(5, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 20015,
+                    instance_count: 19897,
                     first_vertex: 0,
-                    first_instance: 19984,
+                    first_instance: 20102,
                 ),
             ],
             dynamic_offsets: [],
@@ -790,6 +798,7 @@ WriteBuffer(
 Submit(6, [
     RunRenderPass(
         base: (
+            label: None,
             commands: [
                 SetPipeline(Id(0, 1, Vulkan)),
                 SetVertexBuffer(
@@ -805,7 +814,7 @@ Submit(6, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 19983,
+                    instance_count: 20101,
                     first_vertex: 0,
                     first_instance: 0,
                 ),
@@ -816,9 +825,9 @@ Submit(6, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 20015,
+                    instance_count: 19897,
                     first_vertex: 0,
-                    first_instance: 19984,
+                    first_instance: 20102,
                 ),
             ],
             dynamic_offsets: [],
@@ -871,6 +880,7 @@ WriteBuffer(
 Submit(7, [
     RunRenderPass(
         base: (
+            label: None,
             commands: [
                 SetPipeline(Id(0, 1, Vulkan)),
                 SetVertexBuffer(
@@ -886,7 +896,7 @@ Submit(7, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 19983,
+                    instance_count: 20101,
                     first_vertex: 0,
                     first_instance: 0,
                 ),
@@ -897,9 +907,9 @@ Submit(7, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 20015,
+                    instance_count: 19897,
                     first_vertex: 0,
-                    first_instance: 19984,
+                    first_instance: 20102,
                 ),
             ],
             dynamic_offsets: [],
@@ -952,6 +962,7 @@ WriteBuffer(
 Submit(8, [
     RunRenderPass(
         base: (
+            label: None,
             commands: [
                 SetPipeline(Id(0, 1, Vulkan)),
                 SetVertexBuffer(
@@ -967,7 +978,7 @@ Submit(8, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 19983,
+                    instance_count: 20101,
                     first_vertex: 0,
                     first_instance: 0,
                 ),
@@ -978,9 +989,9 @@ Submit(8, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 20015,
+                    instance_count: 19897,
                     first_vertex: 0,
-                    first_instance: 19984,
+                    first_instance: 20102,
                 ),
             ],
             dynamic_offsets: [],
@@ -1033,6 +1044,7 @@ WriteBuffer(
 Submit(9, [
     RunRenderPass(
         base: (
+            label: None,
             commands: [
                 SetPipeline(Id(0, 1, Vulkan)),
                 SetVertexBuffer(
@@ -1048,7 +1060,7 @@ Submit(9, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 19983,
+                    instance_count: 20101,
                     first_vertex: 0,
                     first_instance: 0,
                 ),
@@ -1059,9 +1071,9 @@ Submit(9, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 20015,
+                    instance_count: 19897,
                     first_vertex: 0,
-                    first_instance: 19984,
+                    first_instance: 20102,
                 ),
             ],
             dynamic_offsets: [],
@@ -1114,6 +1126,7 @@ WriteBuffer(
 Submit(10, [
     RunRenderPass(
         base: (
+            label: None,
             commands: [
                 SetPipeline(Id(0, 1, Vulkan)),
                 SetVertexBuffer(
@@ -1129,7 +1142,7 @@ Submit(10, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 19983,
+                    instance_count: 20101,
                     first_vertex: 0,
                     first_instance: 0,
                 ),
@@ -1140,9 +1153,9 @@ Submit(10, [
                 ),
                 Draw(
                     vertex_count: 6,
-                    instance_count: 20015,
+                    instance_count: 19897,
                     first_vertex: 0,
-                    first_instance: 19984,
+                    first_instance: 20102,
                 ),
             ],
             dynamic_offsets: [],
@@ -1152,6 +1165,4625 @@ Submit(10, [
         target_colors: [
             (
                 attachment: Id(0, 10, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 11, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data25.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data26.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(11, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 11, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 12, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data27.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data28.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(12, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 12, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 13, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data29.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data30.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(13, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 13, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 14, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data31.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data32.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(14, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 14, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 15, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data33.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data34.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(15, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 15, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 16, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data35.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data36.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(16, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 16, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 17, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data37.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data38.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(17, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 17, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 18, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data39.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data40.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(18, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 18, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 19, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data41.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data42.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(19, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 19, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 20, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data43.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data44.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(20, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 20, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 21, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data45.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data46.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(21, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 21, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 22, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data47.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data48.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(22, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 22, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 23, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data49.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data50.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(23, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 23, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 24, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data51.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data52.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(24, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 24, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 25, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data53.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data54.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(25, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 25, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 26, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data55.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data56.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(26, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 26, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 27, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data57.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data58.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(27, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 27, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 28, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data59.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data60.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(28, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 28, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 29, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data61.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data62.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(29, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 29, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 30, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data63.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data64.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(30, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 30, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 31, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data65.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data66.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(31, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 31, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 32, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data67.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data68.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(32, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 32, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 33, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data69.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data70.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(33, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 33, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 34, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data71.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data72.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(34, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 34, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 35, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data73.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data74.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(35, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 35, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 36, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data75.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data76.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(36, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 36, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 37, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data77.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data78.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(37, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 37, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 38, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data79.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data80.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(38, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 38, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 39, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data81.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data82.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(39, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 39, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 40, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data83.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data84.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(40, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 40, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 41, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data85.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data86.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(41, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 41, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 42, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data87.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data88.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(42, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 42, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 43, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data89.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data90.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(43, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 43, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 44, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data91.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data92.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(44, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 44, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+CreateSwapChain(Id(0, 1, Vulkan), (
+    usage: (
+        bits: 16,
+    ),
+    format: Bgra8Unorm,
+    width: 1026,
+    height: 1025,
+    present_mode: Mailbox,
+)),
+GetSwapChainTexture(
+    id: Some(Id(0, 45, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data93.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data94.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(45, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 45, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+CreateSwapChain(Id(0, 1, Vulkan), (
+    usage: (
+        bits: 16,
+    ),
+    format: Bgra8Unorm,
+    width: 1054,
+    height: 1043,
+    present_mode: Mailbox,
+)),
+GetSwapChainTexture(
+    id: Some(Id(0, 46, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data95.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data96.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(46, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 46, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+CreateSwapChain(Id(0, 1, Vulkan), (
+    usage: (
+        bits: 16,
+    ),
+    format: Bgra8Unorm,
+    width: 1082,
+    height: 1055,
+    present_mode: Mailbox,
+)),
+GetSwapChainTexture(
+    id: Some(Id(0, 47, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data97.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data98.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(47, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 47, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 48, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data99.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data100.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(48, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 48, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 49, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data101.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data102.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(49, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 49, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 50, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data103.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data104.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(50, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 50, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 51, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data105.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data106.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(51, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 51, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 52, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data107.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data108.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(52, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 52, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 53, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data109.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data110.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(53, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 53, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 54, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data111.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data112.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(54, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 54, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 55, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data113.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data114.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(55, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 55, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 56, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data115.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data116.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(56, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 56, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 57, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data117.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data118.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(57, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 57, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 58, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data119.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data120.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(58, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 58, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 59, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data121.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data122.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(59, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 59, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 60, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data123.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data124.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(60, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 60, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 61, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data125.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data126.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(61, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 61, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 62, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data127.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data128.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(62, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 62, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 63, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data129.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data130.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(63, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 63, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 64, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data131.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data132.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(64, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 64, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 65, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data133.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data134.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(65, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 65, Vulkan),
+                resolve_target: None,
+                channel: (
+                    load_op: Load,
+                    store_op: Store,
+                    clear_value: (
+                        r: 0,
+                        g: 0,
+                        b: 0,
+                        a: 0,
+                    ),
+                    read_only: false,
+                ),
+            ),
+        ],
+        target_depth_stencil: None,
+    ),
+]),
+PresentSwapChain(Id(0, 1, Vulkan)),
+GetSwapChainTexture(
+    id: Some(Id(0, 66, Vulkan)),
+    parent_id: Id(0, 1, Vulkan),
+),
+WriteBuffer(
+    id: Id(1, 1, Vulkan),
+    data: "data135.bin",
+    range: (
+        start: 0,
+        end: 64,
+    ),
+    queued: true,
+),
+WriteBuffer(
+    id: Id(2, 1, Vulkan),
+    data: "data136.bin",
+    range: (
+        start: 0,
+        end: 2560000,
+    ),
+    queued: true,
+),
+Submit(66, [
+    RunRenderPass(
+        base: (
+            label: None,
+            commands: [
+                SetPipeline(Id(0, 1, Vulkan)),
+                SetVertexBuffer(
+                    slot: 0,
+                    buffer_id: Id(2, 1, Vulkan),
+                    offset: 0,
+                    size: None,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(0, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 20101,
+                    first_vertex: 0,
+                    first_instance: 0,
+                ),
+                SetBindGroup(
+                    index: 0,
+                    num_dynamic_offsets: 0,
+                    bind_group_id: Id(1, 1, Vulkan),
+                ),
+                Draw(
+                    vertex_count: 6,
+                    instance_count: 19897,
+                    first_vertex: 0,
+                    first_instance: 20102,
+                ),
+            ],
+            dynamic_offsets: [],
+            string_data: [],
+            push_constant_data: [],
+        ),
+        target_colors: [
+            (
+                attachment: Id(0, 66, Vulkan),
                 resolve_target: None,
                 channel: (
                     load_op: Load,
